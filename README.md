@@ -11,3 +11,17 @@ Halver is a utility for OS X, designed for use with HiDPI displays such as the M
 * A full-resolution JPEG, encoded at 80%
 
 Now you're free to share the PNG screenshot without annoying your friends and neighbors. And the full-size screenshot is there too, but now in a reasonable file size.
+
+Requirements
+------------
+
+OS X 10.8 (Mountain Lion).
+
+A Retina display isn't actually required, although you'll end up with tiny screenshots if you use it on a non-HiDPI display. Which might be what you're going for; if so, knock yourself out.
+
+Add Halver to your login items, to make sure it sticks around on the next launch.
+
+License
+-------
+
+Feel free to use Halver and/or its source code in any way you like. Just don't do anything illegal or evil with it.
