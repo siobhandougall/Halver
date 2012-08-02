@@ -15,13 +15,15 @@ Now you're free to share the PNG screenshot without annoying your friends and ne
 Requirements
 ------------
 
-OS X 10.8 (Mountain Lion).
+Halver requires OS X 10.8 (Mountain Lion).
 
 A Retina display isn't actually required, although you'll end up with tiny screenshots if you use it on a non-HiDPI display. Which might be what you're going for; if so, knock yourself out.
+
+Coded and compiled in Xcode 4.5 DP3. I dunno, it might work in 4.4, but that's left as an exercise for the reader.
 
 Add Halver to your login items, to make sure it sticks around on the next launch.
 
 License
 -------
 
-Feel free to use Halver and/or its source code in any way you like. Just don't do anything illegal or evil with it.
+Feel free to use Halver and/or its source code in any way you like, at your own risk. Just don't do anything illegal or evil with it.
