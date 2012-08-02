@@ -15,7 +15,7 @@
 		4084E9CF15C8591F005FE985 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4084E9CD15C8591F005FE985 /* MainMenu.xib */; };
 		4084E9E615C85A40005FE985 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4084E9E515C85A40005FE985 /* ImageResizer.m */; };
 		4084E9E915C85A4F005FE985 /* DesktopWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4084E9E815C85A4F005FE985 /* DesktopWatcher.m */; };
-		4084E9EB15C88163005FE985 /* Halver.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 4084E9EA15C88163005FE985 /* Halver.iconset */; };
+		4084E9ED15C8826C005FE985 /* Halver.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4084E9EC15C8826C005FE985 /* Halver.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		4084E9E515C85A40005FE985 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizer.m; sourceTree = "<group>"; };
 		4084E9E715C85A4F005FE985 /* DesktopWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopWatcher.h; sourceTree = "<group>"; };
 		4084E9E815C85A4F005FE985 /* DesktopWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopWatcher.m; sourceTree = "<group>"; };
-		4084E9EA15C88163005FE985 /* Halver.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = Halver.iconset; sourceTree = "<group>"; };
+		4084E9EC15C8826C005FE985 /* Halver.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Halver.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		4084E9BF15C8591F005FE985 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4084E9EA15C88163005FE985 /* Halver.iconset */,
+				4084E9EC15C8826C005FE985 /* Halver.icns */,
 				4084E9C015C8591F005FE985 /* Halver-Info.plist */,
 				4084E9C115C8591F005FE985 /* InfoPlist.strings */,
 				4084E9C415C8591F005FE985 /* main.m */,
@@ -122,6 +122,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4084E9D215C8591F005FE985 /* Build configuration list for PBXNativeTarget "Halver" */;
 			buildPhases = (
+				4098641B15CB0355001F1725 /* Increment Build Number (Release only) */,
 				4084E9B015C8591F005FE985 /* Sources */,
 				4084E9B115C8591F005FE985 /* Frameworks */,
 				4084E9B215C8591F005FE985 /* Resources */,
@@ -169,11 +170,28 @@
 				4084E9C315C8591F005FE985 /* InfoPlist.strings in Resources */,
 				4084E9C915C8591F005FE985 /* Credits.rtf in Resources */,
 				4084E9CF15C8591F005FE985 /* MainMenu.xib in Resources */,
-				4084E9EB15C88163005FE985 /* Halver.iconset in Resources */,
+				4084E9ED15C8826C005FE985 /* Halver.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4098641B15CB0355001F1725 /* Increment Build Number (Release only) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number (Release only)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Auto Increment Version Script, adapted from http://stackoverflow.com/questions/7371345/xcode-projects-build-number\n\n# But only run this script on release builds.\n[ ${CONFIGURATION} = \"Release\" ] || exit 0\n\nbuildPlist=${INFOPLIST_FILE}\nCFBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $buildPlist)\nCFBundleVersion=$(($CFBundleVersion + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\nCFBuildDate=$(date +%Y%m%d%H%M%S)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4084E9B015C8591F005FE985 /* Sources */ = {
@@ -311,6 +329,7 @@
 				4084E9D415C8591F005FE985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

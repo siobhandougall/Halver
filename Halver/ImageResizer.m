@@ -3,7 +3,7 @@
 //  Halver
 //
 //  Created by Sean Dougall on 7/31/12.
-//  Copyright (c) 2012 Figure 53. All rights reserved.
+//  Copyright (c) 2012 Sean Dougall. All rights reserved.
 //
 //  Reference: http://stackoverflow.com/questions/3038820/how-to-save-a-nsimage-as-a-new-file/3213017#3213017
 

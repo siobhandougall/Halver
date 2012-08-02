@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Halver</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.figure53.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.seandougall.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,16 +21,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>4</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012 Figure 53. All rights reserved.</string>
+	<string>Copyright © 2012 Sean Dougall. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>LSUIElement</key>
-	<true/>
 </dict>
 </plist>
